@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="Index.html">ínicio</a></li>
+                <li><a href="POST.html">API</a></li>
+                <li><a href="Index.html">Info</a></li>
+                <li style="margin-left: auto;">
+                    <img src="assets/badge.png" alt="logo" width="32" height="32"
+                        style="border-radius: 50%; object-fit: cover; vertical-align: middle;">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="center-content">
+        <div style="align-items: center; justify-content: center;padding-top: 20px;">
+            <div class="left-cards">
+                <div class="iframes-container">
+                    <div class="card-iframe">
+                        <div class="toolbar">
+                            <div class="code-panel">
+                                <!DOCTYPE html>
+                                <html lang="pt-br">
+
+                                <head>
+                                    <meta charset="UTF-8">
+                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                    <title>DevTools — GitHub User</title>
+                                    <link
+                                        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@600;700&display=swap"
+                                        rel="stylesheet">
+                                    <style>
+                                        *,
+                                        *::before,
+                                        *::after {
+                                            box-sizing: border-box;
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+
+                                        :root {
+                                            --bg: #0d0f14;
+                                            --surface: #13151c;
+                                            --surface2: #1a1d27;
+                                            --border: rgba(255, 255, 255, 0.07);
+                                            --border2: rgba(255, 255, 255, 0.13);
+                                            --green: #3ddc84;
+                                            --green-dim: rgba(61, 220, 132, 0.12);
+                                            --amber: #f5a623;
+                                            --blue: #58a6ff;
+                                            --text: #e2e4ec;
+                                            --muted: #6b7280;
+                                            --mono: 'JetBrains Mono', monospace;
+                                            --display: 'Syne', sans-serif;
+                                        }
+
+                                        body {
+                                            background: var(--bg);
+                                            color: var(--text);
+                                            font-family: var(--mono);
+                                            min-height: 100vh;
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            padding: 2rem;
+                                        }
+
+                                        .toolbar {
+                                            width: 100%;
+                                            max-width: 680px;
+                                            background: var(--surface);
+                                            border: 1px solid var(--border);
+                                            border-bottom: none;
+                                            border-radius: 12px 12px 0 0;
+                                            padding: 10px 16px;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 12px;
+                                        }
+
+                                        .dots {
+                                            display: flex;
+                                            gap: 6px;
+                                        }
+
+                                        .dot {
+                                            width: 11px;
+                                            height: 11px;
+                                            border-radius: 50%;
+                                        }
+
+                                        .dot.red {
+                                            background: #ff5f57;
+                                        }
+
+                                        .dot.amber {
+                                            background: #febc2e;
+                                        }
+
+                                        .dot.green {
+                                            background: #28c840;
+                                        }
+
+                                        .toolbar-title {
+                                            font-size: 11px;
+                                            color: var(--muted);
+                                            letter-spacing: 0.06em;
+                                            margin-left: 4px;
+                                        }
+
+                                        .run-btn {
+                                            margin-left: auto;
+                                            background: var(--green-dim);
+                                            border: 1px solid rgba(61, 220, 132, 0.3);
+                                            color: var(--green);
+                                            font-family: var(--mono);
+                                            font-size: 11px;
+                                            font-weight: 500;
+                                            padding: 5px 14px;
+                                            border-radius: 6px;
+                                            cursor: pointer;
+                                            letter-spacing: 0.04em;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 6px;
+                                            transition: background 0.15s;
+                                        }
+
+                                        .run-btn:hover {
+                                            background: rgba(61, 220, 132, 0.2);
+                                        }
+
+                                        .run-btn:active {
+                                            transform: scale(0.97);
+                                        }
+
+                                        .code-panel {
+                                            width: 100%;
+                                            max-width: 680px;
+                                            background: var(--surface);
+                                            border: 1px solid var(--border);
+                                            border-bottom: none;
+                                            padding: 1.25rem 1.5rem;
+                                            overflow-x: auto;
+                                        }
+
+                                        pre {
+                                            font-family: var(--mono);
+                                            font-size: 13px;
+                                            line-height: 1.75;
+                                        }
+
+                                        .line {
+                                            display: flex;
+                                        }
+
+                                        .ln {
+                                            color: var(--muted);
+                                            user-select: none;
+                                            min-width: 28px;
+                                            font-size: 11px;
+                                            padding-top: 1px;
+                                            opacity: 0.45;
+                                        }
+
+                                        .kw {
+                                            color: #c792ea;
+                                        }
+
+                                        .fn {
+                                            color: #82aaff;
+                                        }
+
+                                        .str {
+                                            color: #c3e88d;
+                                        }
+
+                                        .pun {
+                                            color: #89ddff;
+                                        }
+
+                                        .divider {
+                                            width: 100%;
+                                            max-width: 680px;
+                                            background: var(--surface2);
+                                            border-left: 1px solid var(--border);
+                                            border-right: 1px solid var(--border);
+                                            padding: 6px 16px;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 8px;
+                                            font-size: 10px;
+                                            color: var(--muted);
+                                            letter-spacing: 0.08em;
+                                        }
+
+                                        .divider-dot {
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 50%;
+                                            background: var(--green);
+                                            animation: pulse 2s ease-in-out infinite;
+                                        }
+
+                                        @keyframes pulse {
+
+                                            0%,
+                                            100% {
+                                                opacity: 1;
+                                            }
+
+                                            50% {
+                                                opacity: 0.3;
+                                            }
+                                        }
+
+                                        .output-panel {
+                                            width: 100%;
+                                            max-width: 680px;
+                                            background: var(--surface);
+                                            border: 1px solid var(--border);
+                                            border-top: none;
+                                            border-radius: 0 0 12px 12px;
+                                            padding: 1.5rem;
+                                            min-height: 120px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+
+                                        .gh-card {
+                                            width: 100%;
+                                            background: var(--surface2);
+                                            border: 1px solid var(--border2);
+                                            border-radius: 12px;
+                                            overflow: hidden;
+                                            animation: fadeIn 0.4s ease;
+                                        }
+
+                                        @keyframes fadeIn {
+                                            from {
+                                                opacity: 0;
+                                                transform: translateY(8px);
+                                            }
+
+                                            to {
+                                                opacity: 1;
+                                                transform: translateY(0);
+                                            }
+                                        }
+
+                                        .gh-card-header {
+                                            padding: 1.25rem 1.5rem;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 1rem;
+                                            border-bottom: 1px solid var(--border);
+                                        }
+
+                                        .gh-avatar {
+                                            width: 54px;
+                                            height: 54px;
+                                            border-radius: 50%;
+                                            border: 2px solid var(--border2);
+                                            object-fit: cover;
+                                        }
+
+                                        .gh-name {
+                                            font-family: var(--display);
+                                            font-size: 17px;
+                                            font-weight: 700;
+                                            color: #fff;
+                                            line-height: 1.2;
+                                        }
+
+                                        .gh-login {
+                                            font-size: 12px;
+                                            color: var(--blue);
+                                            margin-top: 3px;
+                                        }
+
+                                        .gh-badge {
+                                            margin-left: auto;
+                                            font-size: 10px;
+                                            font-weight: 500;
+                                            padding: 4px 10px;
+                                            border-radius: 99px;
+                                            background: var(--green-dim);
+                                            color: var(--green);
+                                            border: 1px solid rgba(61, 220, 132, 0.25);
+                                            letter-spacing: 0.05em;
+                                        }
+
+                                        .gh-bio {
+                                            padding: 0.9rem 1.5rem;
+                                            font-size: 12px;
+                                            color: var(--muted);
+                                            border-bottom: 1px solid var(--border);
+                                            line-height: 1.6;
+                                        }
+
+                                        .gh-stats {
+                                            display: grid;
+                                            grid-template-columns: repeat(3, 1fr);
+                                            border-bottom: 1px solid var(--border);
+                                        }
+
+                                        .gh-stat {
+                                            padding: 0.9rem 1.25rem;
+                                            text-align: center;
+                                            border-right: 1px solid var(--border);
+                                        }
+
+                                        .gh-stat:last-child {
+                                            border-right: none;
+                                        }
+
+                                        .gh-stat-value {
+                                            font-size: 18px;
+                                            font-weight: 700;
+                                            color: #fff;
+                                            line-height: 1;
+                                        }
+
+                                        .gh-stat-label {
+                                            font-size: 10px;
+                                            color: var(--muted);
+                                            margin-top: 4px;
+                                            letter-spacing: 0.06em;
+                                        }
+
+                                        .gh-meta {
+                                            padding: 0.9rem 1.5rem;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            gap: 14px;
+                                        }
+
+                                        .gh-meta-item {
+                                            font-size: 11px;
+                                            color: var(--muted);
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 5px;
+                                        }
+
+                                        .gh-meta-item span {
+                                            color: var(--text);
+                                        }
+
+                                        .json-toggle {
+                                            width: 100%;
+                                            max-width: 680px;
+                                            margin-top: 12px;
+                                            background: none;
+                                            border: 1px solid var(--border);
+                                            border-radius: 8px;
+                                            color: var(--muted);
+                                            font-family: var(--mono);
+                                            font-size: 11px;
+                                            padding: 8px 14px;
+                                            cursor: pointer;
+                                            text-align: left;
+                                            letter-spacing: 0.04em;
+                                            transition: border-color 0.15s, color 0.15s;
+                                        }
+
+                                        .json-toggle:hover {
+                                            border-color: var(--border2);
+                                            color: var(--text);
+                                        }
+
+                                        .json-raw {
+                                            display: none;
+                                            width: 100%;
+                                            max-width: 680px;
+                                            background: var(--surface);
+                                            border: 1px solid var(--border);
+                                            border-top: none;
+                                            border-radius: 0 0 8px 8px;
+                                            padding: 1rem 1.25rem;
+                                            font-size: 11px;
+                                            line-height: 1.7;
+                                            color: #c3e88d;
+                                            overflow-x: auto;
+                                            white-space: pre;
+                                        }
+
+                                        .json-raw.open {
+                                            display: block;
+                                        }
+
+                                        .spinner {
+                                            width: 20px;
+                                            height: 20px;
+                                            border: 2px solid var(--border2);
+                                            border-top-color: var(--green);
+                                            border-radius: 50%;
+                                            animation: spin 0.7s linear infinite;
+                                        }
+
+                                        @keyframes spin {
+                                            to {
+                                                transform: rotate(360deg);
+                                            }
+                                        }
+                                    </style>
+                                </head>
+
+                                <body>
+
+                                    <div class="toolbar">
+                                        <div class="dots">
+                                            <div class="dot red"></div>
+                                            <div class="dot amber"></div>
+                                            <div class="dot green"></div>
+                                        </div>
+                                        <span class="toolbar-title">devtools.js — Console</span>
+                                        <button class="run-btn" onclick="pegaDados()">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+                                                <polygon points="2,1 9,5 2,9" />
+                                            </svg>
+                                            Run
+                                        </button>
+                                    </div>
+
+                                    <div class="code-panel">
+                                        <pre>
+<div class="line"><span class="ln">1</span><span class="kw">async function</span> <span class="fn">pegaDados</span><span class="pun">() {</span></div>
+<div class="line"><span class="ln">2</span>  <span class="kw">const</span> resultado <span class="pun">=</span> <span class="kw">await</span> <span class="fn">fetch</span><span class="pun">(</span><span class="str">'https://api.github.com/users/GustavoBorbaJS'</span><span class="pun">)</span></div>
+<div class="line"><span class="ln">3</span>  <span class="kw">const</span> resultadoConvertido <span class="pun">=</span> <span class="kw">await</span> resultado<span class="pun">.</span><span class="fn">json</span><span class="pun">();</span></div>
+<div class="line"><span class="ln">4</span>  console<span class="pun">.</span><span class="fn">log</span><span class="pun">(</span>resultadoConvertido<span class="pun">)</span></div>
+<div class="line"><span class="ln">5</span><span class="pun">}</span></div>
+    </pre>
+                                    </div>
+
+                                    <div class="divider">
+                                        <div class="divider-dot"></div>
+                                        OUTPUT
+                                    </div>
+
+                                    <div class="output-panel" id="output">
+                                        <p style="font-size:12px; color:var(--muted);">▶ Clique em <strong
+                                                style="color:var(--green)">Run</strong> para executar</p>
+                                    </div>
+
+                                    <button class="json-toggle" id="json-toggle" style="display:none"
+                                        onclick="toggleJson()">{ } Ver JSON bruto</button>
+                                    <div class="json-raw" id="json-raw"></div>
+
+                                    <script>
+                                        async function pegaDados() {
+                                            const output = document.getElementById('output');
+                                            output.innerHTML = '<div class="spinner"></div>';
+
+                                            try {
+                                                const resultado = await fetch('https://api.github.com/users/GustavoBorbaJS');
+                                                const d = await resultado.json();
+
+                                                output.innerHTML = `
+          <div class="gh-card">
+            <div class="gh-card-header">
+              <img class="gh-avatar" src="${d.avatar_url}" alt="${d.login}">
+              <div>
+                <div class="gh-name">${d.name || d.login}</div>
+                <div class="gh-login">@${d.login}</div>
+              </div>
+              <span class="gh-badge">GitHub</span>
+            </div>
+            ${d.bio ? `<div class="gh-bio">${d.bio}</div>` : ''}
+            <div class="gh-stats">
+              <div class="gh-stat"><div class="gh-stat-value">${d.public_repos}</div><div class="gh-stat-label">repos</div></div>
+              <div class="gh-stat"><div class="gh-stat-value">${d.followers}</div><div class="gh-stat-label">followers</div></div>
+              <div class="gh-stat"><div class="gh-stat-value">${d.following}</div><div class="gh-stat-label">following</div></div>
+            </div>
+            <div class="gh-meta">
+              ${d.location ? `<div class="gh-meta-item">📍 <span>${d.location}</span></div>` : ''}
+              ${d.blog ? `<div class="gh-meta-item">🔗 <span>${d.blog}</span></div>` : ''}
+              ${d.company ? `<div class="gh-meta-item">🏢 <span>${d.company}</span></div>` : ''}
+              <div class="gh-meta-item">📅 <span>desde ${new Date(d.created_at).getFullYear()}</span></div>
+            </div>
+          </div>
+        `;
+
+                                                document.getElementById('json-toggle').style.display = 'block';
+                                                document.getElementById('json-raw').textContent = JSON.stringify(d, null, 2);
+
+                                            } catch (e) {
+                                                output.innerHTML = `<span style="color:#ff5f57; font-size:12px;">❌ Erro: ${e.message}</span>`;
+                                            }
+                                        }
+
+                                        function toggleJson() {
+                                            const raw = document.getElementById('json-raw');
+                                            raw.classList.toggle('open');
+                                            document.getElementById('json-toggle').textContent = raw.classList.contains('open') ? '{ } Ocultar JSON' : '{ } Ver JSON bruto';
+                                        }
+                                    </script>
+                                </body>
+
+                                </html>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+
+</html>

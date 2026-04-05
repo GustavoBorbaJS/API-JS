@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="Index.html">ínicio</a></li>
+                <li><a href="POST.html">API</a></li>
+                <li><a href="Index.html">Info</a></li>
+                <li style="margin-left: auto;">
+                    <img src="assets/badge.png" alt="logo" width="32" height="32"
+                        style="border-radius: 50%; object-fit: cover; vertical-align: middle;">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="left-cards">
+            <div class="iframes-container">
+                <div class="card-iframe">
+                    <iframe width="350" height="190" src="https://www.youtube.com/embed/5rZqYPKIwkY?si=hWoS_PopPm76WgeA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="card-iframe">
+                    <iframe width="350" height="190" src="https://www.youtube.com/embed/EEStcIe8rAM?si=uSswE-iZJmdsN2bj"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-content">
+            <section>
+                <div style="text-align: center;">
+                    <h3>Informações</h3>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h3>Referencia</h3>
+                    <br>
+                    <p>O POST é um método HTTP que permite enviar informações ao servidor de forma segura e discreta,
+                        diferente do GET, que envia dados na URL. Ele é amplamente utilizado para criar novos recursos,
+                        submeter formulários, enviar arquivos ou processar informações sensíveis, como senhas e dados de
+                        pagamento</p>
+                </div>
+                <div>
+
+                </div>
+            </section>
+            <div style="display: flex; gap: 24px; align-items: flex-start;">
+
+                <section style="width: fit-content;">
+                    <div class="card-iframe2">
+                        <form action="https://formspree.io/f/xkoppzva" method="POST">
+                            <div class="field-wrap">
+                                <label>Nome: </label>
+                                <input type="text" name="nome" placeholder="Seu nome completo">
+                            </div>
+                            <br>
+                            <div class="field-wrap">
+                                <label>Email: </label>
+                                <input type="email" name="email" placeholder="email@exemplo.com">
+                            </div>
+                            <br>
+                            <div class="field-wrap">
+                                <label>Mensagem: </label>
+                                <textarea name="mensagem" placeholder="Escreva sua mensagem..." rows="4"
+                                    style="width:100%; padding: 10px 12px; border: 0.5px solid rgba(0,0,0,0.12); border-radius: 8px; background: #f9f8f5; font-family: 'DM Sans', sans-serif; font-size: 14px; color: #1a1a1a; outline: none; resize: vertical;"></textarea>
+                            </div>
+                            <br>
+                            <button type="submit">enviar</button>
+                        </form>
+                    </div>
+                </section>
+
+                <iframe data-testid="embed-iframe" style="border-radius:12px; flex-shrink: 0;"
+                    src="https://open.spotify.com/embed/track/6Dk5fHTvH897XrVzCO64Mx?utm_source=generator" width="352"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+
+            </div>
+        </div>
+
+        <div class="right-image">
+            <img src="assets/prog.png" alt="prog">
+        </div>
+    </main>
+    <footer>
+        <p>&copy;Gustavo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
